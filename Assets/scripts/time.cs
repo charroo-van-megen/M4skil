@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-public class time
+
+public class TimeManager : MonoBehaviour
 {
     [SerializeField] Button startbutton;
     [SerializeField] Button stopbutton;
     [SerializeField] Button continuebutton;
-    
 }

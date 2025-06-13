@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class toandfro : MonoBehaviour
+public class ToAndFro : MonoBehaviour
 {
     [SerializeField] Transform a;
     [SerializeField] Transform b;
@@ -29,10 +29,8 @@ public class toandfro : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        // Interpolation progress
         float t = time / duration;
 
-        // Set movement direction and difference vector for debug purposes
         if (fromAToB)
         {
             differenceVector = b.position - a.position;
@@ -47,13 +45,8 @@ public class toandfro : MonoBehaviour
         distance = differenceVector.magnitude;
         direction = differenceVector.normalized;
 
-        // Debug output (optional)
-        // Debug.Log($"Direction: {direction}, Distance: {distance}");
-
-        // Update UI
         stopwatch.text = time.ToString("F3");
 
-        // Switch direction when done
         if (time >= duration)
         {
             fromAToB = !fromAToB;
